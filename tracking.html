@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tracking — H&amp;M Aviation</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-tracking">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <div class="logo-mark"><i class="fas fa-plane"></i></div>
+        <div class="logo-text"><span class="brand">H&amp;M</span><small class="sub">Aviation</small></div>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+        <ul class="nav-list">
+          <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+          <li><a href="shipments.html"><i class="fas fa-box"></i> Shipments</a></li>
+          <li><a href="flights.html"><i class="fas fa-route"></i> Flights</a></li>
+          <li><a class="active" href="tracking.html"><i class="fas fa-search-location"></i> Tracking</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tracking-main">
+    <section class="tracking-card">
+      <h2>Track a shipment</h2>
+      <p>Enter your tracking code to view live-like updates.</p>
+      <div class="tracking-form">
+        <input id="trackingInput" placeholder="e.g. HM-2025-00123" />
+        <button id="trackBtn" class="btn btn-primary"><i class="fas fa-search"></i> Track</button>
+      </div>
+
+      <div id="trackingResult" class="tracking-result" aria-live="polite" style="display:none">
+        <div class="track-header">
+          <div>
+            <h3 id="trackCode">HM-2025-00123</h3>
+            <small id="trackRoute">LHR → JFK</small>
+          </div>
+          <div id="trackStatus" class="track-status"><i class="fas fa-hourglass-half"></i> Pending</div>
+        </div>
+
+        <ul id="trackTimeline" class="timeline">
+          <!-- timeline steps live-updated -->
+        </ul>
+      </div>
+
+      <div id="trackingError" class="error" role="alert" style="display:none"></div>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
