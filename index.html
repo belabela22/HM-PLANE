@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>H&amp;M Aviation — Fast Fashion in the Sky</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-landing">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <div class="logo-mark"><i class="fas fa-plane"></i></div>
+        <div class="logo-text">
+          <span class="brand">H&amp;M</span>
+          <small class="sub">Aviation</small>
+        </div>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-list">
+          <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+          <li><a href="shipments.html"><i class="fas fa-box"></i> Shipments</a></li>
+          <li><a href="flights.html"><i class="fas fa-route"></i> Flights</a></li>
+          <li><a href="tracking.html"><i class="fas fa-search-location"></i> Tracking</a></li>
+        </ul>
+      </nav>
+
+      <div class="cta">
+        <a href="shipments.html" class="btn btn-primary">Create Shipment</a>
+        <a href="tracking.html" class="btn btn-outline">Track</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="clouds">
+          <div class="plane" aria-hidden="true">
+            <svg viewBox="0 0 64 64" width="220" height="80" fill="none">
+              <path d="M2 32c8-2 24-6 40-6s30 4 40 6c-10 4-28 12-40 12S12 36 2 32z" fill="#fff" opacity="0.05"/>
+              <path d="M4 30c10-4 26-8 30-8s22 4 34 8" stroke="#fff" stroke-width="2" opacity="0.06"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-left">
+          <h1>H&amp;M Aviation — Fast Fashion, Faster Delivery</h1>
+          <p class="lead">We transport clothing shipments worldwide by air with tracking, flight assignments and live-like updates. Designed for retailers who need speed and style.</p>
+          <div class="hero-actions">
+            <a class="btn btn-hero" href="dashboard.html">Go to Dashboard</a>
+            <a class="btn btn-ghost" href="shipments.html">View Shipments</a>
+          </div>
+          <ul class="features">
+            <li><i class="fas fa-check-circle"></i> Real-time simulated tracking</li>
+            <li><i class="fas fa-plane-departure"></i> Flight assignments & scheduling</li>
+            <li><i class="fas fa-sync-alt"></i> Admin controls (add/edit/delete)</li>
+          </ul>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="card-header">
+              <span>Next Departure</span>
+              <strong>Flight HM451 • LHR → JFK</strong>
+            </div>
+            <div class="card-body">
+              <div class="flight-meta">
+                <div><small>ETD</small><div>10:45</div></div>
+                <div><small>ETA</small><div>14:50</div></div>
+                <div><small>Assigned</small><div>42 pkgs</div></div>
+              </div>
+              <div class="progress">
+                <div class="indicator" style="width:32%"></div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="flights.html" class="link">View Flights</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about container">
+      <h2>Why choose H&amp;M Aviation?</h2>
+      <p>Combining logistics expertise with fashion sensibility. Your clothes arrive safe, fast and in style.</p>
+      <div class="stats-grid">
+        <div class="stat">
+          <h3>+1200</h3>
+          <p>Shipments this month</p>
+        </div>
+        <div class="stat">
+          <h3>98%</h3>
+          <p>On-time rate</p>
+        </div>
+        <div class="stat">
+          <h3>24/7</h3>
+          <p>Tracking updates</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <strong>H&amp;M Aviation</strong> — Fast Fashion in the Sky</div>
+      <div class="socials">
+        <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="linkedin"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Common JS -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
