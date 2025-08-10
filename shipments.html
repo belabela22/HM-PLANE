@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shipments — H&amp;M Aviation</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-shipments">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <div class="logo-mark"><i class="fas fa-plane"></i></div>
+        <div class="logo-text"><span class="brand">H&amp;M</span><small class="sub">Aviation</small></div>
+      </a>
+
+      <nav class="nav" id="mainNav">
+        <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+        <ul class="nav-list">
+          <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+          <li><a class="active" href="shipments.html"><i class="fas fa-box"></i> Shipments</a></li>
+          <li><a href="flights.html"><i class="fas fa-route"></i> Flights</a></li>
+          <li><a href="tracking.html"><i class="fas fa-search-location"></i> Tracking</a></li>
+        </ul>
+      </nav>
+
+      <div class="cta">
+        <button id="openNewShipment" class="btn btn-primary"><i class="fas fa-plus"></i> New</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container shipments-main">
+    <section class="controls">
+      <div class="search">
+        <input id="shipmentSearch" placeholder="Search by sender, recipient, tracking code..." />
+        <button id="searchBtn" class="btn btn-small"><i class="fas fa-search"></i></button>
+      </div>
+
+      <div class="filters">
+        <select id="statusFilter">
+          <option value="all">All statuses</option>
+          <option value="Pending">Pending</option>
+          <option value="In Transit">In Transit</option>
+          <option value="Delivered">Delivered</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="table-wrap">
+      <table class="shipments-table" aria-describedby="shipments-list">
+        <thead>
+          <tr>
+            <th>Sender</th>
+            <th>Recipient</th>
+            <th>Tracking Code</th>
+            <th>Status</th>
+            <th>Flight</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="shipmentsTableBody">
+          <!-- populated by JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Shipment Detail Modal -->
+  <div id="shipmentModal" class="modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <header class="modal-header">
+        <h3 id="modalTitle">Shipment Details</h3>
+        <button class="modal-close" id="closeModal"><i class="fas fa-times"></i></button>
+      </header>
+      <div class="modal-body" id="modalBody">
+        <!-- populated by JS -->
+      </div>
+      <footer class="modal-footer">
+        <button id="editShipmentBtn" class="btn btn-outline"><i class="fas fa-edit"></i> Edit</button>
+        <button id="deleteShipmentBtn" class="btn btn-danger"><i class="fas fa-trash"></i> Delete</button>
+        <button id="modalSaveBtn" class="btn btn-primary" style="display:none">Save</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Confirm Modal -->
+  <div id="confirmModal" class="modal" aria-hidden="true">
+    <div class="modal-dialog small">
+      <header class="modal-header">
+        <h3>Confirm</h3>
+        <button class="modal-close" data-close="confirmModal"><i class="fas fa-times"></i></button>
+      </header>
+      <div class="modal-body">
+        <p id="confirmText">Are you sure?</p>
+      </div>
+      <footer class="modal-footer">
+        <button class="btn btn-outline" data-close="confirmModal">Cancel</button>
+        <button id="confirmYes" class="btn btn-danger">Yes, Delete</button>
+      </footer>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
